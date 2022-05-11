@@ -1,0 +1,4 @@
+#Thu May 12 00:03:37 IST 2022
+base.0=/Users/aishwaryapshetty/VolopayAssignment/android/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
