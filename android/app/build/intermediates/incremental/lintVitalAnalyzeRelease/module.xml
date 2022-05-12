@@ -1,6 +1,6 @@
 <lint-module
     format="1"
-    dir="/Users/aishwaryapshetty/VolopayAssignment/android/app"
+    dir="/Users/aishwaryapshetty/Volopay-assignment/android/app"
     name=":app"
     type="APP"
     maven="VolopayAssignment:app:"

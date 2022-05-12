@@ -49,10 +49,11 @@ const Home = () => {
         ) : (
           <List
             searchPhrase={searchPhrase}
-            data={giphyData}
+            giphyData={giphyData}
             offset={offset}
             setOffset={setOffset}
             setClicked={setClicked}
+            setGiphyData={setGiphyData}
           />
         )}
       </View>

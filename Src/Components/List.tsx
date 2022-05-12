@@ -8,11 +8,10 @@ import {ProgressiveImage} from '../Components/index';
 const width = Dimensions.get('window').width / 2.2;
 
 const List = (props: any) => {
-  const [giphyData, setGiphyData] = useState(props.data);
 
   useEffect(() => {
-    setGiphyData(props.data);
-  }, [props.data]);
+    props.setGiphyData(props.giphyData);
+  }, [props.giphyData]);
 
   const renderItem = ({item}: any) => {
     return (
@@ -37,13 +36,13 @@ const List = (props: any) => {
       }
       //increase offset on scrolling to fetch more data
       props.setOffset(offset);
-      setGiphyData([...giphyData, ...res.data]);
+      props.setGiphyData([...props.giphyData, ...res.data]);
     });
   };
 
   return (
     <FlatList
-      data={giphyData}
+      data={props.giphyData}
       renderItem={renderItem}
       keyExtractor={item => item.id}
       numColumns={2}

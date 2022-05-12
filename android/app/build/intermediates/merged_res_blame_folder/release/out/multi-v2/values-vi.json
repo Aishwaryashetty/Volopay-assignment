@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/aishwaryapshetty/VolopayAssignment/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-vi/values-vi.xml",
+            "outputFile": "/Users/aishwaryapshetty/Volopay-assignment/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-vi/values-vi.xml",
             "map": [
                 {
                     "source": "/Users/aishwaryapshetty/.gradle/caches/transforms-3/6636202a2e344f69092b239199c01f49/transformed/core-1.1.0/res/values-vi/values-vi.xml",

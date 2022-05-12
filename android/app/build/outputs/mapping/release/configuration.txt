@@ -1,4 +1,4 @@
-# The proguard configuration file for the following section is /Users/aishwaryapshetty/VolopayAssignment/android/app/build/intermediates/default_proguard_files/global/proguard-android.txt-7.0.4
+# The proguard configuration file for the following section is /Users/aishwaryapshetty/Volopay-assignment/android/app/build/intermediates/default_proguard_files/global/proguard-android.txt-7.0.4
 # This is a configuration file for ProGuard.
 # http://proguard.sourceforge.net/index.html#manual/usage.html
 #
@@ -110,8 +110,8 @@
 # These classes are duplicated between android.jar and core-lambda-stubs.jar.
 -dontnote java.lang.invoke.**
 
-# End of content from /Users/aishwaryapshetty/VolopayAssignment/android/app/build/intermediates/default_proguard_files/global/proguard-android.txt-7.0.4
-# The proguard configuration file for the following section is /Users/aishwaryapshetty/VolopayAssignment/android/app/proguard-rules.pro
+# End of content from /Users/aishwaryapshetty/Volopay-assignment/android/app/build/intermediates/default_proguard_files/global/proguard-android.txt-7.0.4
+# The proguard configuration file for the following section is /Users/aishwaryapshetty/Volopay-assignment/android/app/proguard-rules.pro
 # Add project specific ProGuard rules here.
 # By default, the flags in this file are appended to flags specified
 # in /usr/local/Cellar/android-sdk/24.3.3/tools/proguard/proguard-android.txt
@@ -123,8 +123,8 @@
 
 # Add any project specific keep options here:
 
-# End of content from /Users/aishwaryapshetty/VolopayAssignment/android/app/proguard-rules.pro
-# The proguard configuration file for the following section is /Users/aishwaryapshetty/VolopayAssignment/android/app/build/intermediates/aapt_proguard_file/release/aapt_rules.txt
+# End of content from /Users/aishwaryapshetty/Volopay-assignment/android/app/proguard-rules.pro
+# The proguard configuration file for the following section is /Users/aishwaryapshetty/Volopay-assignment/android/app/build/intermediates/aapt_proguard_file/release/aapt_rules.txt
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
 -keep class com.volopayassignment.MainActivity { <init>(); }
 -keep class com.volopayassignment.MainApplication { <init>(); }
@@ -169,7 +169,7 @@
 -keep class androidx.core.widget.NestedScrollView { <init>(android.content.Context, android.util.AttributeSet); }
 
 
-# End of content from /Users/aishwaryapshetty/VolopayAssignment/android/app/build/intermediates/aapt_proguard_file/release/aapt_rules.txt
+# End of content from /Users/aishwaryapshetty/Volopay-assignment/android/app/build/intermediates/aapt_proguard_file/release/aapt_rules.txt
 # The proguard configuration file for the following section is /Users/aishwaryapshetty/.gradle/caches/transforms-3/3870dbabc2a1410386e20fa69567ecf9/transformed/jetified-react-native-0.68.1/proguard.txt
 # Copyright (c) Meta Platforms, Inc. and affiliates.
 #

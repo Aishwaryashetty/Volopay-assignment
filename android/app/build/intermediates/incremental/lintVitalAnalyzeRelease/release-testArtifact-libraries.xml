@@ -734,7 +734,7 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="/Users/aishwaryapshetty/VolopayAssignment/android@@:app::release"
-      jars="/Users/aishwaryapshetty/VolopayAssignment/android/app/build/intermediates/app_classes/release/classes.jar"
+      name="/Users/aishwaryapshetty/Volopay-assignment/android@@:app::release"
+      jars="/Users/aishwaryapshetty/Volopay-assignment/android/app/build/intermediates/app_classes/release/classes.jar"
       resolved="::"/>
 </libraries>
