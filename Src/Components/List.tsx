@@ -30,7 +30,6 @@ const List = (props: any) => {
     //if searchPhrase is empty trending data is displayed else data based on searchPhrase
 
     ApiServices.getGiphyApiResponse(offset, props.searchPhrase).then(res => {
-      console.log('fetchGiphyData res', res);
       if (!res.success) {
         return;
       }

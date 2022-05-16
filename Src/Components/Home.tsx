@@ -13,7 +13,6 @@ const Home = () => {
   const fetchGiphyData = (txt: string = '') => {
     //if searchPhrase is empty trending data is displayed else data based on searchPhrase
     ApiServices.getGiphyApiResponse(0, txt).then(res => {
-      console.log('fetchGiphyData res', res);
       if (!res.success) {
         return;
       }

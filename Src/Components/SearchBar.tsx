@@ -9,18 +9,14 @@ import {
   Image,
 } from 'react-native';
 
+import * as Helpers from '../Services/Helpers'
+
 const SearchBar = (props: any) => {
-  let filterTimeout: any;
 
-  // throttle - wait for ms secs and then set the data of search phrase
-  const throttle = (fn: any, ms: number) => {
-    clearTimeout(filterTimeout);
-
-    filterTimeout = setTimeout(() => {
-      props.setGiphyData();
-      fn;
-      props.setOffset(0);
-    }, ms);
+  const optimisedSearch = (text : string) => {
+    props.setSearchPhrase(text)
+  props.setGiphyData();
+  props.setOffset(0);
   };
 
   return (
@@ -40,7 +36,7 @@ const SearchBar = (props: any) => {
           style={styles.input}
           placeholder="Search"
           value={props.searchPhrase}
-          onChangeText={text => throttle(props.setSearchPhrase(text), 500)}
+          onChangeText={(text) => Helpers.throttle(optimisedSearch(text), 500)}
           onFocus={() => {
             props.setClicked(true);
           }}

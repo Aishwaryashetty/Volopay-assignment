@@ -11,7 +11,6 @@ export const getGiphyApiResponse = (offset: number, searchPhrase: string) => {
     data: null,
     success: false,
   };
-
   const SearchUrl = `http://api.giphy.com/v1/gifs/search?q=${searchPhrase}&api_key=${Constants.ApiKey}&limit=${Constants.Limit}&offset=${offset}`;
   const TrendingUrl = `http://api.giphy.com/v1/gifs/trending?api_key=${Constants.ApiKey}&limit=${Constants.Limit}&offset=${offset}`;
 
