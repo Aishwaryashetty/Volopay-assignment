@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {
   StyleSheet,
   TextInput,
@@ -13,11 +13,15 @@ import * as Helpers from '../Services/Helpers'
 
 const SearchBar = (props: any) => {
 
-  const optimisedSearch = (text : string) => {
-    props.setSearchPhrase(text)
+  const optimisedSearch = (text: string) => {
+    props.setSearchPhrase(text);
   props.setGiphyData();
   props.setOffset(0);
   };
+
+
+  const handleChange = useCallback(Helpers.throttle(optimisedSearch, 500),[]);
+
 
   return (
     <View style={styles.container}>
@@ -31,12 +35,12 @@ const SearchBar = (props: any) => {
           style={styles.searchIcon}
           source={require('../Assets/searchIcon.png')}
         />
-        {/* search bar - on entering the data throttle   */}
+        {/* search bar - on entering the data, throttle   */}
         <TextInput
           style={styles.input}
           placeholder="Search"
           value={props.searchPhrase}
-          onChangeText={(text) => Helpers.throttle(optimisedSearch(text), 500)}
+          onChangeText={handleChange}
           onFocus={() => {
             props.setClicked(true);
           }}
@@ -115,3 +119,4 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
 });
+
