@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, { useCallback, useState } from 'react';
 import {
   StyleSheet,
   TextInput,
@@ -15,12 +15,11 @@ const SearchBar = (props: any) => {
 
   const optimisedSearch = (text: string) => {
     props.setSearchPhrase(text);
-  props.setGiphyData();
-  props.setOffset(0);
+    props.setGiphyData();
+    props.setOffset(0);
   };
 
-
-  const handleChange = useCallback(Helpers.throttle(optimisedSearch, 500),[]);
+  const handleChange = useCallback(Helpers.throttle(optimisedSearch, 500), []);
 
 
   return (
@@ -39,7 +38,6 @@ const SearchBar = (props: any) => {
         <TextInput
           style={styles.input}
           placeholder="Search"
-          value={props.searchPhrase}
           onChangeText={handleChange}
           onFocus={() => {
             props.setClicked(true);
@@ -48,7 +46,7 @@ const SearchBar = (props: any) => {
         {/* clear icon - on click, clear searchPhrase and set offset to 0 */}
         {props.clicked && (
           <TouchableOpacity
-            style={{padding: 1}}
+            style={{ padding: 1 }}
             onPress={() => {
               props.setSearchPhrase('');
               props.setOffset(0);
@@ -75,7 +73,7 @@ const SearchBar = (props: any) => {
   );
 };
 
-export default SearchBar;
+export default React.memo(SearchBar);
 
 const styles = StyleSheet.create({
   container: {

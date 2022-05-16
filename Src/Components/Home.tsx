@@ -13,10 +13,10 @@ const Home = () => {
   const fetchGiphyData = (txt: string = '') => {
     //if searchPhrase is empty trending data is displayed else data based on searchPhrase
     ApiServices.getGiphyApiResponse(0, txt).then(res => {
-      if (!res.success) {
+      if (!res?.success) {
         return;
       }
-      setGiphyData(res.data);
+      setGiphyData(res?.data);
     });
   };
 
@@ -44,7 +44,9 @@ const Home = () => {
         />
         {/* show loading indicator until data from api is set */}
         {!giphyData ? (
+          <View style={styles.root}>
           <ActivityIndicator size="large" />
+          </View>
         ) : (
           <List
             searchPhrase={searchPhrase}

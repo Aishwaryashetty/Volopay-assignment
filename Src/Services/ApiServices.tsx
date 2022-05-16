@@ -28,5 +28,6 @@ export const getGiphyApiResponse = (offset: number, searchPhrase: string) => {
     })
     .catch(error => {
       console.log('error', error);
+      return response;
     });
 };
